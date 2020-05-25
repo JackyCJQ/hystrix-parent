@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: user
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}-${server.port}
+
+server:
+  port: 8081
+management:
+  endpoint:
+   health:
+     show-details: always
+#hystrix具有回退的能力
+feign:
+  hystrix:
+    enabled: true
+
+ribbon:  #默认超时时间为1s
+  ReadTimeout: 5000
+#全局默认的配置
+hystrix:
+   command:
+       default:
+           execution:
+              isolation:
+                thread:
+                   timeoutInMilliseconds: 5000
+       IActivity#firstLoginActivity(Long):
+           execution:
+              isolation:
+                thread:
+                  timeoutInMilliseconds: 5
+           metrics:
+             rollingStats:
+                timeInMilliseconds: 3000
+
+
