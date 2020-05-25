@@ -1,6 +1,6 @@
 package com.jacky.hystrix.activity.controller;
 
-import com.jacky.hystrix.base.controller.IActivity;
+import com.jacky.hystrix.base.inter.IActivity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
