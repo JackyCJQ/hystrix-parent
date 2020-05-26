@@ -1,5 +1,7 @@
 package com.jacky.hystrix.user.controller;
 
+import com.jacky.hystrix.base.client.ActivityClient;
+import com.jacky.hystrix.base.client.OpsClient;
 import com.jacky.hystrix.base.inter.IActivity;
 import com.jacky.hystrix.user.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +18,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/feign")
 public class FeignRegistrationController {
     @Autowired
-    private IActivity service;
+    private ActivityClient service;
+    @Autowired
+    private OpsClient client;
 //    @Autowired
 //    private
 //    @Autowired

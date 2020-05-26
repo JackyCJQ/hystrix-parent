@@ -9,7 +9,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 public class ActivityApplication {
 
     public static void main(String[] args) {
-
         SpringApplication.run(ActivityApplication.class, args);
     }
 

@@ -1,12 +1,13 @@
 package com.jacky.hystrix.user;
 
+import com.jacky.hystrix.base.client.ActivityClient;
+import com.jacky.hystrix.base.client.OpsClient;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.client.RestTemplate;
 
 //@SpringBootApplication
@@ -20,9 +21,15 @@ import org.springframework.web.client.RestTemplate;
  * 开启了断路器
  */
 @SpringCloudApplication
-@EnableFeignClients(basePackages = {"com.jacky.hystrix.base.client"})
-@ComponentScan(basePackages = {"com.jacky.hystrix.user", "com.jacky.hystrix.base.client"})
+@EnableFeignClients(
+        basePackages = {"com.jacky.hystrix.base"})
+//@ComponentScan(basePackages = {"com.jacky.hystrix.user", "com.jacky.hystrix.base.client"})
 public class UserApplication {
+
+    @Autowired
+    private ActivityClient activityClient;
+    @Autowired
+    private OpsClient opsClient;
 
     public static void main(String[] args) {
 

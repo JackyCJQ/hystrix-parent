@@ -20,6 +20,7 @@ public class LoginActivityController implements IActivity {
      * @param userId
      * @return
      */
+    @Override
     public String firstLoginActivity(@RequestBody Long userId) {
         System.out.println("LoginActivityController 为首次登陆（注册）用户发放优惠券成功" + userId);
         return "success";
@@ -31,6 +32,7 @@ public class LoginActivityController implements IActivity {
      * @param userId
      * @return
      */
+    @Override
     public String firstLoginActivityTimeout(@RequestBody Long userId) {
         try {
 //            TimeUnit.SECONDS.sleep(RandomUtils.nextInt(5) + 1);
@@ -48,6 +50,7 @@ public class LoginActivityController implements IActivity {
      * @param userId
      * @return
      */
+    @Override
     public String firstLoginActivityError(@RequestBody Long userId) {
         throw new RuntimeException("LoginActivityController 为首次登陆，用户发放优惠券失败" + userId);
 //        return "success";
