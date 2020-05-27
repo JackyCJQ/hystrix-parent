@@ -29,13 +29,13 @@ hystrix:
               isolation:
                 thread:
                    timeoutInMilliseconds: 5000
-       IActivity#firstLoginActivity(Long):
+       ActivityClient#firstLoginActivityTimeout(Long):
            execution:
               isolation:
                 thread:
                   timeoutInMilliseconds: 5
            metrics:
              rollingStats:
-                timeInMilliseconds: 3000
+                timeInMilliseconds: 1000
 
 

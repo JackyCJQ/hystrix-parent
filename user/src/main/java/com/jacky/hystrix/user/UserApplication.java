@@ -1,8 +1,5 @@
 package com.jacky.hystrix.user;
 
-import com.jacky.hystrix.base.client.ActivityClient;
-import com.jacky.hystrix.base.client.OpsClient;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
@@ -25,11 +22,6 @@ import org.springframework.web.client.RestTemplate;
         basePackages = {"com.jacky.hystrix.base"})
 //@ComponentScan(basePackages = {"com.jacky.hystrix.user", "com.jacky.hystrix.base.client"})
 public class UserApplication {
-
-    @Autowired
-    private ActivityClient activityClient;
-    @Autowired
-    private OpsClient opsClient;
 
     public static void main(String[] args) {
 
