@@ -8,13 +8,13 @@ import org.slf4j.LoggerFactory;
  * @author chenjiaqi
  * @create 2020-05-27
  */
-public class ActivityClientFallbackFactoyr implements FallbackFactory<ActivityClient> {
+public class ActivityClientFallbackFactory implements FallbackFactory<ActivityClient> {
 
-    private Logger logger = LoggerFactory.getLogger(ActivityClientFallbackFactoyr.class);
+    private Logger logger = LoggerFactory.getLogger(ActivityClientFallbackFactory.class);
 
     @Override
     public ActivityClient create(Throwable throwable) {
-        logger.error("ActivityClient", throwable);
+//        logger.error("ActivityClient", throwable);
 
         return new ActivityClient() {
             @Override

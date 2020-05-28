@@ -7,7 +7,7 @@ import org.springframework.cloud.openfeign.FeignClient;
  * @Authror jacky
  * @create 2020-05-25
  */
-@FeignClient(value = "activity-8090", fallbackFactory = ActivityClientFallbackFactoyr.class,
+@FeignClient(value = "activity-8090", fallbackFactory = ActivityClientFallbackFactory.class,
         configuration = ActivityConfiguration.class
 )
 public interface ActivityClient extends IActivity {
