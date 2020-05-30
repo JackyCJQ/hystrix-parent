@@ -1,11 +1,11 @@
-spring:
-  application:
-    name: ops
-  cloud:
-    consul:
-      host: localhost
-      port: 8500
-      discovery:
-        service-name: ${spring.application.name}-${server.port}
+#spring:
+#  application:
+#    name: ops
+#  cloud:
+#    consul:
+#      host: localhost
+#      port: 8500
+#      discovery:
+#        service-name: ${spring.application.name}-${server.port}
 server:
   port: 8100

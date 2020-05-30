@@ -1,26 +1,26 @@
-package com.jacky.hystrix.base.client;
-
+//package com.jacky.hystrix.base.client;
 //
-//import org.springframework.stereotype.Component;
+////
+////import org.springframework.stereotype.Component;
+////
+/////**
+//// * @Authror jacky
+//// * @create 2020-05-25
+//// */
+////@Component
+//public class ActivityFallback implements ActivityClient {
+//    @Override
+//    public String firstLoginActivity(Long userId) {
+//        return "fallback";
+//    }
 //
-///**
-// * @Authror jacky
-// * @create 2020-05-25
-// */
-//@Component
-public class ActivityFallback implements ActivityClient {
-    @Override
-    public String firstLoginActivity(Long userId) {
-        return "fallback";
-    }
-
-    @Override
-    public String firstLoginActivityTimeout(Long userId) {
-        return "fallback";
-    }
-
-    @Override
-    public String firstLoginActivityError(Long userId) {
-        return "fallback";
-    }
-}
+//    @Override
+//    public String firstLoginActivityTimeout(Long userId) {
+//        return "fallback";
+//    }
+//
+//    @Override
+//    public String firstLoginActivityError(Long userId) {
+//        return "fallback";
+//    }
+//}
