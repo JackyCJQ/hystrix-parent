@@ -1,6 +1,6 @@
 package com.jacky.hystrix.ops.controller;
 
-import com.jacky.hystrix.base.inter.IOps;
+import com.jacky.hystrix.base.common.IOps;
 import org.springframework.web.bind.annotation.RestController;
 
 /**

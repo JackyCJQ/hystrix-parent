@@ -1,6 +1,7 @@
 package com.jacky.hystrix.activity.controller;
 
-import com.jacky.hystrix.base.inter.IActivity;
+import com.jacky.hystrix.base.common.IActivity;
+import org.apache.commons.lang.math.RandomUtils;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -35,8 +36,8 @@ public class LoginActivityController implements IActivity {
     @Override
     public String firstLoginActivityTimeout(@RequestBody Long userId) {
         try {
-//            TimeUnit.SECONDS.sleep(RandomUtils.nextInt(5) + 1);
-            TimeUnit.SECONDS.sleep(2 + 1);
+            TimeUnit.SECONDS.sleep(RandomUtils.nextInt(5) + 1);
+//            TimeUnit.SECONDS.sleep(2 + 1);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

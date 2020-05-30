@@ -1,4 +1,4 @@
-package com.jacky.hystrix.base.inter;
+package com.jacky.hystrix.base.common;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestBody;
  * @create 2020-05-25
  */
 public interface IOps {
-
     /**
      * 用户计价
      *

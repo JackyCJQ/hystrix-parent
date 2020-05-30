@@ -19,6 +19,8 @@
         <module>base</module>
         <module>user</module>
         <module>ops</module>
+        <module>monitor</module>
+        <module>turbine</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>

@@ -1,8 +1,5 @@
 package com.jacky.hystrix.user;
 
-import com.jacky.hystrix.base.client.DemoClient1;
-import com.jacky.hystrix.base.client.DemoClient2;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;

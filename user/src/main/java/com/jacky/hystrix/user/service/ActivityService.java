@@ -31,11 +31,11 @@ public class ActivityService {
      * @param id
      * @return
      */
-//    @HystrixCommand(
-//            commandProperties = {
-//                    @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "2000")
-//            }
-//    )
+    @HystrixCommand(
+            commandProperties = {
+                    @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "2000")
+            }
+    )
     public String firstLoginTimeout(Long id) {
         return restTemplate.postForObject("http://activity-8090/firstLoginActivityTimeout", id, String.class);
     }
@@ -46,9 +46,9 @@ public class ActivityService {
      * @param id
      * @return
      */
-//    @HystrixCommand(
-//            fallbackMethod = "fallback"
-//    )
+    @HystrixCommand(
+            fallbackMethod = "fallback"
+    )
     public String firstLoginError(Long id) {
         return restTemplate.postForObject("http://activity-8090/firstLoginActivityError", id, String.class);
     }
