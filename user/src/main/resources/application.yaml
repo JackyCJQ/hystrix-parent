@@ -10,6 +10,12 @@ spring:
 
 server:
   port: 8081
+  tomcat:
+    minSpareThreads: 1
+    max-threads: 1
+    accept-count: 0
+    max-connections: 1
+
 management:
   endpoints:
     web:
@@ -42,4 +48,5 @@ hystrix:
              rollingStats:
                 timeInMilliseconds: 1000
 
-
+test:
+   msg: bom
