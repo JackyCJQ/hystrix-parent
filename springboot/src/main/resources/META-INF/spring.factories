@@ -1,0 +1,2 @@
+org.springframework.context.ApplicationContextInitializer=com.jacky.hystrix.springboot.config.FirstInitializer
+org.springframework.context.ApplicationListener=com.jacky.hystrix.springboot.listener.FirstListener

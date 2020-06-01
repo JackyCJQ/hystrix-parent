@@ -1,0 +1,7 @@
+test:
+  msg: jacky
+context:
+  initializer:
+     classes: com.jacky.hystrix.springboot.config.ThirdInitializer
+  listener:
+     classes: com.jacky.hystrix.springboot.listener.ThirdListenter
