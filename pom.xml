@@ -21,6 +21,7 @@
         <module>ops</module>
         <module>monitor</module>
         <module>turbine</module>
+        <module>springboot</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
